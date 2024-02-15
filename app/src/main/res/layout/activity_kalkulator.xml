@@ -1,0 +1,90 @@
+s<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/download1"
+    tools:context=".Kalkulator">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:gravity="center_horizontal"
+        android:text="Calculator"
+        android:textColor="#A8666C"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/angka1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Masukkan angka 1"
+        android:textColorHint="#A8666C"
+        android:layout_below="@id/opSpinner"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judul"/>
+
+    <EditText
+        android:id="@+id/angka2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Masukkan angka 2"
+        android:textColorHint="#A8666C"
+        android:layout_below="@id/angka1"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/angka1"/>
+
+    <Spinner
+        android:id="@+id/opSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/operators"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/angka2"/>
+
+    <Button
+        android:id="@+id/btnKalkulasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/angka2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#FAEAEE"
+        android:text="Calculate"
+        android:textColor="#A8666C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/opSpinner"/>
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnKalkulasi"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Result :"
+        android:textColor="#A8666C"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnKalkulasi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
